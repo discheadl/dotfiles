@@ -1,0 +1,10 @@
+{
+  "bg":        "{color0}",
+  "bgCard":    "{color1}",
+  "bgItem":    "{color2}",
+  "fg":        "{foreground}",
+  "fgMuted":   "{color8}",
+  "accent":    "{color6}",
+  "accentRed": "{color1}",
+  "accentAlt": "{color3}"
+}

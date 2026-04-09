@@ -1,0 +1,17 @@
+* {
+    /* Fondo principal transparente */
+    bg: rgba(20, 20, 20, 0.9);
+    
+    /* Fondo de la caja de búsqueda */
+    bg-input: rgba({{foreground | rgb}}, 0.08);
+    
+    /* Color de acento para la app seleccionada */
+    bg-selected: {{color1}};
+    
+    /* Color del texto */
+    fg: {{foreground}};
+    fg-dim: rgba({{foreground | rgb}}, 0.80);
+    
+    /* Color para las líneas divisorias */
+    border-color: rgba({{foreground | rgb}}, 0.15);
+}

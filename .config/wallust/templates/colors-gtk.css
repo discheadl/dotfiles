@@ -1,0 +1,14 @@
+/* =========================================================
+   WALLUST - VARIABLES DE COLOR GTK
+   ========================================================= */
+@define-color bg {{background}};
+@define-color bg-alpha rgba({{background | rgb}}, 0.85);
+
+@define-color fg {{foreground}};
+@define-color fg-alpha rgba({{foreground | rgb}}, 0.5);
+
+@define-color color1 {{color1}};
+@define-color color2 {{color2}};
+@define-color color3 {{color3}};
+@define-color color4 {{color4}};
+@define-color color9 {{color9}};

@@ -1,0 +1,145 @@
+{
+  // ==============================
+  // CONFIGURACIÓN GENERAL
+  // ==============================
+  "layer": "top",
+  "position": "top",
+  "exclusive": true,
+  //"height": 36,
+  "margin-top": 6,
+  "margin-left": 15,
+  "margin-right": 15,
+  "modules-left": [
+    "custom/arch",
+    "hyprland/workspaces"
+  ],
+  "modules-center": [
+    "clock"
+  ],
+  "modules-right": [
+    "tray",
+    "group/hardware",
+    "group/notifications"
+  ],
+  "group/hardware": {
+    "orientation": "horizontal",
+    "modules": [
+      //"idle_inhibitor",
+      "pulseaudio",
+      "pulseaudio#microphone",
+      "network",
+      "battery"
+    ]
+  },
+  "group/notifications": {
+    "orientation": "horizontal",
+    "modules": [
+      "custom/notifications"
+    ]
+  },
+  // ==============================
+  // IZQUIERDA – LOGO ARCH
+  // ==============================
+  "custom/arch": {
+    "format": "",
+    "on-click": "wlogout",
+    "tooltip-format": "Menú de Apagado",
+    "tooltip": true
+  },
+  "clock": {
+    "format": "{:%d%b %H:%M}",
+    "tooltip-format": "{:%A %d %B %Y}"
+  },
+  // ==============================
+  // CENTRO – WORKSPACES (DOTS)
+  // ==============================
+  "hyprland/workspaces": {
+    "format": "{name}",
+    "on-click": "activate",
+    "all-outputs": true,
+    "disable-scroll": true
+  },
+  // ==============================
+  // DERECHA – TRAY
+  // ==============================
+  "tray": {
+    "icon-size": 20,
+    "spacing": 10,
+    "layer": "overlay",
+    "show-passive-items": true
+  },
+  // ==============================
+  // NETWORK
+  // ==============================
+  "network": {
+    "format-wifi": "",
+    "format-ethernet": "󰈀",
+    "format-disconnected": "󰖪",
+    "tooltip": true
+  },
+  // ==============================
+  // AUDIO
+  // ==============================
+  "pulseaudio": {
+    "format": "{icon}",
+    "format-muted": "󰝟",
+    "format-icons": {
+      "default": [
+        "󰕿",
+        "󰖀",
+        "󰕾"
+      ]
+    },
+    "scroll-step": 5
+  },
+  // ==============================
+  // BATERÍA
+  // ==============================
+  "battery": {
+    "states": {
+      "warning": 30,
+      "critical": 15
+    },
+    // AQUÍ ESTÁ EL CAMBIO: Agregamos {capacity}% antes del icono
+    "format": "{capacity}{icon}",
+    "format-charging": "{capacity}󰂄",
+    "format-plugged": "{capacity}",
+    "format-alt": "{time} {icon}",
+    "format-icons": [
+      "󰂎",
+      "󰁺",
+      "󰁻",
+      "󰁼",
+      "󰁽",
+      "󰁾",
+      "󰁿",
+      "󰂀",
+      "󰂁",
+      "󰂂",
+      "󰁹"
+    ],
+    "tooltip": true
+  },
+  // ==============================
+  // MICROFONO
+  // ==============================
+  "pulseaudio#microphone": {
+    "format": "{format_source}",
+    "format-source": "",
+    "format-source-muted": "",
+    "on-click": "pavucontrol -t 4",
+    "on-click-middle": "pamixer --default-source -m",
+    "scroll-step": 5,
+    "tooltip": true,
+    "tooltip-format": "Micrófono: {volume}%"
+  },
+  // ==============================
+  // NOTIFICACIONES
+  // ==============================
+  "custom/notifications": {
+    "tooltip": false,
+    "format": "󰂚",
+    "on-click": "bash ~/.config/quickshell/top-bar/toggle-hub.sh",
+    "escape": true
+  }
+}
