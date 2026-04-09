@@ -1,0 +1,61 @@
+# ~/.config/starship.toml
+add_newline = true
+
+format = """$os$directory$character"""
+
+[os]
+disabled = false
+style = "bold #1793d1"
+
+[os.symbols]
+Arch = " "
+
+[palettes.sith]
+dark_gray = "#444444"
+light_gray = "#888888"
+intense_red = "#d70000"
+soft_white = "#eeeeee"
+
+palette = "sith"
+
+[directory]
+style = "bold intense_red"
+read_only = " 🔒"
+truncation_length = 3
+truncation_symbol = "…/"
+home_symbol = "~"
+
+[character]
+success_symbol = "[❯](bold light_gray)"
+error_symbol = "[❯](bold intense_red)"
+
+[git_branch]
+style = "bold soft_white"
+symbol = " "
+
+[git_status]
+style = "bold intense_red"
+conflicted = "🏳"
+modified = "!"
+deleted = "✘"
+
+[package]
+style = "bold intense_red"
+symbol = "📦 "
+
+[nodejs]
+style = "bold intense_red"
+symbol = " "
+
+[python]
+style = "bold intense_red"
+symbol = " "
+
+[golang]
+style = "bold intense_red"
+symbol = " "
+
+[cmd_duration]
+min_time = 2000
+style = "bold light_gray"
+show_milliseconds = false
